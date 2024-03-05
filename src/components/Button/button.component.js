@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import "./button.css"
 
-export default function Button({ text = "+", type = "increment", handleClick = () => null }) {
+function Button({ text, type, handleClick }) {
+    const onClick = useCallback(() => {
+        handleClick(type);
+    }, [handleClick, type]);
+
     return (
-        <button type="button" className='btn' onClick={handleClick}>{text}</button>
-    )
+        <button type="button" className="btn" onClick={onClick}>
+            {text}
+        </button>
+    );
 }
+
+export default React.memo(Button);

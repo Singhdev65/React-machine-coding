@@ -1,0 +1,18 @@
+.counter-container {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.counter-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.counter-value {
+    margin: 0 20px;
+}
