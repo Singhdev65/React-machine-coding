@@ -1,0 +1,18 @@
+.btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 25px;
+    font-weight: 500;
+    background: teal;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background: whitesmoke;
+    border: 2px solid black;
+    color: #000;
+}
