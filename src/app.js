@@ -1,6 +1,9 @@
 import React from "react";
-import { Counter } from "./projects";
+import { Counter, Todo } from "./projects";
 
-export default function App(){
-    return <Counter />
+export default function App() {
+    return <>
+        {/* <Counter /> */}
+        <Todo />
+    </>
 }

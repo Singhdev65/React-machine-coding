@@ -1,13 +1,19 @@
-import React, { useCallback } from 'react'
-import "./button.css"
+import React, { useCallback } from 'react';
+import "./button.css";
 
-function Button({ text, type, handleClick }) {
-    const onClick = useCallback(() => {
-        handleClick(type);
-    }, [handleClick, type]);
+function Button({ text, onClick, customStyle = "", id }) {
+    const handleClick = useCallback((evt) => {
+        if (typeof onClick === 'function') {
+            if (id !== undefined) {
+                onClick(id);
+            } else {
+                onClick();
+            }
+        }
+    }, [onClick, id]);
 
     return (
-        <button type="button" className="btn" onClick={onClick}>
+        <button type='submit' className={`btn ${customStyle}`} onClick={handleClick}>
             {text}
         </button>
     );
