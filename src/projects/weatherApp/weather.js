@@ -1,4 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
+import actionTypes from '../../utils/actionTypes';
+import Loading from "../../components/Loading"
 
 const initialState = {
   loading: true,
@@ -6,19 +8,16 @@ const initialState = {
   weatherData: null,
 };
 
-const FETCH_SUCCESS = 'FETCH_SUCCESS';
-const FETCH_ERROR = 'FETCH_ERROR';
-
-const reducer = (state, action) => {
+const weatherReducer = (state, action) => {
   switch (action.type) {
-    case FETCH_SUCCESS:
+    case actionTypes.FETCH_SUCCESS:
       return {
         ...state,
         loading: false,
         weatherData: action.payload,
         error: '',
       };
-    case FETCH_ERROR:
+    case actionTypes.FETCH_ERROR:
       return {
         ...state,
         loading: false,
@@ -29,7 +28,7 @@ const reducer = (state, action) => {
   }
 };
 
-const LoadingIndicator = () => <p>Loading...</p>;
+const LoadingIndicator = () => <Loading />;
 
 const ErrorDisplay = ({ error }) => <p>{error}</p>;
 
@@ -48,8 +47,8 @@ const WeatherDetails = ({ weatherData }) => (
 );
 
 const Weather = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  
+  const [state, dispatch] = useReducer(weatherReducer, initialState);
+
   const weatherApi = {
     key: '356a2a96918e23662c88d6424c7f8fbe',
     baseUrl: 'https://api.openweathermap.org/data/2.5/weather'
@@ -60,9 +59,9 @@ const Weather = () => {
       try {
         const response = await fetch(`${weatherApi.baseUrl}?lat=44.34&lon=10.99&appid=${weatherApi.key}&units=metric`);
         const data = await response.json();
-        dispatch({ type: FETCH_SUCCESS, payload: data });
+        dispatch({ type: actionTypes.FETCH_SUCCESS, payload: data });
       } catch (error) {
-        dispatch({ type: FETCH_ERROR, payload: 'Failed to fetch weather data' });
+        dispatch({ type: actionTypes.FETCH_ERROR, payload: 'Failed to fetch weather data' });
       }
     };
 

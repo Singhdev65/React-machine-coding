@@ -1,6 +1,7 @@
 import React, { useState, useReducer, useCallback } from 'react';
 import Button from '../../components/Button';
 import './todo.css';
+import actionTypes from '../../utils/actionTypes';
 
 const newTodo = (todoName) => {
     return {
@@ -13,18 +14,18 @@ const newTodo = (todoName) => {
 const todoReducer = (todos, action) => {
     const { type, payload } = action;
     switch (type) {
-        case "ADD_TODO":
+        case actionTypes.ADD_TODO:
             return [...todos, newTodo(payload.name)];
-        case "DELETE_TODO":
+        case actionTypes.DELETE_TODO:
             return todos.filter(todo => todo.id !== payload.id);
-        case "TOGGLE_TODO":
+        case actionTypes.TOGGLE_TODO:
             return todos.map(todo => {
                 if (todo.id === payload.id) {
                     return { ...todo, isComplete: !todo.isComplete };
                 }
                 return todo;
             });
-        case "EDIT_TODO":
+        case actionTypes.EDIT_TODO:
             return todos.map(todo => {
                 if (todo.id === payload.id) {
                     return { ...todo, todoName: payload.name };

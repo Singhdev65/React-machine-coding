@@ -36,8 +36,8 @@ const Counter = React.memo(() => {
 
   return (
     <div className='counter-container'>
-      <div>
-        {counterHeading}
+      {counterHeading}
+      <div className='horizontal-center'>
         <Button type="decrement" text="-" onClick={() => handleClick('decrement')} />
         <span className="counter-value">{state.count}</span>
         <Button text="+" onClick={() => handleClick('increment')} />
