@@ -21,16 +21,8 @@
     gap: 1rem;
 }
 
-input {
-    padding: 10px;
-    margin-right: 10px;
-    width: 60%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
 .bg-red {
-    background-color: #f83c0c;
+    background-color: #f83c0c !important;
 }
 
 .listContiner {
@@ -52,4 +44,12 @@ input {
 
 .strike-through {
     text-decoration: line-through;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }

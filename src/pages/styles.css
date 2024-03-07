@@ -1,0 +1,41 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.not-found-animation {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6347;
+    /* Orange-Red */
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.not-found-text {
+    margin-left: 20px;
+}
+
+.not-found-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.not-found-text p {
+    font-size: 18px;
+    color: #666;
+}
