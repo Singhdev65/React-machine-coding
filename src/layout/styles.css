@@ -67,6 +67,8 @@ nav ul {
     }
 }
 
+/* ************* */
+
 
 .breadcrumb {
     background-color: #f4f4f4;
@@ -94,3 +96,20 @@ nav ul {
         font-size: 14px;
     }
 }
+
+/* **********menu-item************ */
+
+.container {
+    display : inline-block;
+    margin : 0px 15px;
+    font-family : Lexend;
+  }
+
+  .link{
+    text-decoration : none;
+    color : #fff;
+    cursor : "pointer";
+    font-weight : "bold";
+    letter-spacing : "2px";
+    font-family : "Lexend";
+  }

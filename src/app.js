@@ -31,18 +31,16 @@ const projects = [
 ];
 
 const App = () => (
-    <Router>
-        <Layout>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/projects" element={<ProjectsListPage projects={projects} />} />
-                {projects.map(project => (
-                    <Route key={project.id} path={`/projects/:projectId`} element={<Project projects={projects} />} />
-                ))}
-                <Route path="*" element={<Nofound />} />
-            </Routes>
-        </Layout>
-    </Router>
+    <Layout>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<ProjectsListPage projects={projects} />} />
+            {projects.map(project => (
+                <Route key={project.id} path={`/projects/:projectId`} element={<Project projects={projects} />} />
+            ))}
+            <Route path="*" element={<Nofound />} />
+        </Routes>
+    </Layout>
 );
 
 export default App;

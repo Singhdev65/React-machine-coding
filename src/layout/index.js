@@ -24,13 +24,24 @@ const Breadcrumb = () => {
     );
 };
 
+
+const MenuItem = ({ path, title }) => {
+    return (
+        <li className="container">
+            <Link className="link" to={path}>
+                {title}
+            </Link>
+        </li>
+    )
+}
+
 const Header = () => {
     return <header>
         <div className="logo">⭐</div>
         <nav>
             <div className="menu-icon">&#9776;</div>
             <ul>
-                <Link to={"/projects"} className="menu"><li>Projects</li></Link>
+                <MenuItem title="Projects" path="/projects" />
             </ul>
         </nav>
     </header>

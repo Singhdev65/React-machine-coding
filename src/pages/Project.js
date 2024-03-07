@@ -10,8 +10,8 @@ export default function Project({ projects }) {
     }
     const ProjectComponent = project.component;
     return (
-        <div className="container">
+        <>
             <ProjectComponent />
-        </div>
+        </>
     );
 }
