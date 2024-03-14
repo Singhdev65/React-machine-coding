@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Counter, Todo, Weather } from "./projects";
 import "./app.css"
 import Layout from "./layout";
