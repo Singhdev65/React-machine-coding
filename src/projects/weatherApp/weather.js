@@ -41,8 +41,8 @@ const WeatherDetails = ({ weatherData }) => (
       <p className="weather-card__item">Max Temperature: {weatherData?.main?.temp_max}</p>
       <p className="weather-card__item">Min Temperature: {weatherData?.main?.temp_min}</p>
       <p className="weather-card__item">Location: {weatherData?.name}</p>
-      <p className="weather-card__item">Weather: {weatherData?.weather[0]?.main}</p>
-      <p className="weather-card__item">Description: {weatherData?.weather[0]?.description}</p>
+      <p className="weather-card__item">Weather: {weatherData?.weather?.[0]?.main}</p>
+      <p className="weather-card__item">Description: {weatherData?.weather?.[0]?.description}</p>
     </div>
   </div>
 );
