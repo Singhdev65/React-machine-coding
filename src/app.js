@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import ProjectsListPage from "./pages/ProjectListPage";
 import Project from "./pages/Project";
 import Nofound from "./pages/Not";
-import VideoEditor from "./projects/video-editor";
 
 const projects = [
   {
@@ -30,13 +29,6 @@ const projects = [
     description: "A weather forecast project",
     path: "/projects/3",
     component: Weather,
-  },
-  {
-    id: "4",
-    title: "video-editor",
-    description: "A weather forecast project",
-    path: "/projects/4",
-    component: VideoEditor,
   },
 ];
 
