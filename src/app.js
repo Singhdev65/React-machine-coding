@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Counter, Todo, Weather } from "./projects";
+import { Counter, InfiniteScroll, Todo, Weather } from "./projects";
 import "./app.css";
 import Layout from "./layout";
 import Home from "./pages/Home";
@@ -29,6 +29,13 @@ const projects = [
     description: "A weather forecast project",
     path: "/projects/3",
     component: Weather,
+  },
+  {
+    id: "4",
+    title: "Infinite scroll",
+    description: "Scroll infinitely",
+    path: "/projects/4",
+    component: InfiniteScroll,
   },
 ];
 

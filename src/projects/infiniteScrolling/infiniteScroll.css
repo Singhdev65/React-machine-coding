@@ -1,0 +1,11 @@
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 5px;
+}
