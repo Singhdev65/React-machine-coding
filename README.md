@@ -1,5 +1,4 @@
-infinite scrolling
-Holy Grail layout
+infinite scrolling - Done
 progressbar
 typeahead
 editable Todo
@@ -29,3 +28,7 @@ Drag and drop
 tic tac toe
 toast component
 poll widget
+
+large-project-> (MERN)
+REAL STATE -> https://www.youtube.com/watch?v=YdBy9-0pER4 |
+Food ORDERING WEBSITE -> https://www.youtube.com/watch?v=ardeKHEN1j4

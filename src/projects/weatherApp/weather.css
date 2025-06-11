@@ -1,22 +1,94 @@
+/* weather.css */
+
+body {
+  background: #0e0e0e;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.05);
+}
+
+.form input {
+  padding: 0.7rem 1.2rem;
+  border: 2px solid #222;
+  border-radius: 10px;
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input:focus {
+  border-color: #0af;
+  box-shadow: 0 0 8px #0af;
+}
+
+/* Weather Card */
 .weather-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #1a1a1a, #101010);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 12px 32px rgba(0, 170, 255, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-6px);
 }
 
 .weather-card__title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: #0af;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .weather-card__content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .weather-card__item {
-    margin-bottom: 5px;
+  background: #181818;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border-left: 4px solid #0af;
+  box-shadow: 0 2px 10px rgba(0, 170, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.weather-card__item:hover {
+  background-color: #1f1f1f;
+  border-left-color: #008ee6;
+}
+
+/* Error & Loading */
+.error,
+.loading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #f44;
 }
