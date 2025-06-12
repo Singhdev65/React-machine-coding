@@ -1,6 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Counter, InfiniteScroll, Todo, Weather } from "./projects";
+import {
+  Counter,
+  InfiniteScroll,
+  Todo,
+  Weather,
+  ProgressBar,
+} from "./projects";
 import "./app.css";
 import Layout from "./layout";
 import Home from "./pages/Home";
@@ -36,6 +42,13 @@ const projects = [
     description: "Scroll infinitely",
     path: "/projects/4",
     component: InfiniteScroll,
+  },
+  {
+    id: "5",
+    title: "Progress",
+    description: "Progress Bar",
+    path: "/projects/5",
+    component: ProgressBar,
   },
 ];
 

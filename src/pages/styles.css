@@ -40,7 +40,7 @@
 }
 
 .app {
-  height: 100vh;
+  height: calc(100vh-64px);
   overflow: hidden;
   position: relative;
 }
@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 60px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 64px);
   position: relative;
   background: linear-gradient(135deg, #111, #222);
 }

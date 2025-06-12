@@ -1,7 +1,7 @@
 infinite scrolling - Done
-progressbar
+progressbar - Done
 typeahead
-editable Todo
+editable Todo - Done
 Auto suggestion
 create feature flag
 stepper component
